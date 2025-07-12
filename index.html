@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FitThenics Club Haripur - Premium fitness center with strength training, cardio, kids boxing, and separate female gym. Define your potential." />
+    <meta name="keywords" content="gym, fitness, haripur, strength training, cardio, boxing, female gym" />
+    <meta property="og:title" content="FitThenics Club Haripur - Define Your Potential" />
+    <meta property="og:description" content="Premium fitness center in Haripur with modern facilities and expert trainers" />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://fithenics-haripur.vercel.app" />
+    
+    <!-- Premium Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=cabinet-grotesk@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <title>FitThenics Club Haripur - Define Your Potential</title>
+    
+    <style>
+      /* Premium Loading Screen */
+      .loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #0A0A0B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-logo {
+        width: 80px;
+        height: 80px;
+        position: relative;
+      }
+      
+      .loading-logo::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 2px solid #E8876E;
+        border-radius: 50%;
+        border-right-color: transparent;
+        animation: spin 1s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-primary text-stone-100 antialiased">
+    <!-- Premium Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-logo"></div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <script>
+      // Hide loading screen once content is loaded
+      window.addEventListener('load', () => {
+        document.getElementById('loading-screen').style.opacity = '0';
+        setTimeout(() => {
+          document.getElementById('loading-screen').style.display = 'none';
+        }, 300);
+      });
+    </script>
+  </body>
+</html>
