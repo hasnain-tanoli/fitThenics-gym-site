@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 4% 4%;
+    --foreground: 0 0% 95%;
+    --primary: 54 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 240 4% 8%;
+    --secondary-foreground: 0 0% 90%;
+    --border: 240 4% 12%;
+    --input: 240 4% 12%;
+    --ring: 54 100% 50%;
+    --radius: 0.5rem;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 240 4% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 54 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+    --popover: 240 4% 4%;
+    --popover-foreground: 0 0% 95%;
+    --card: 240 4% 8%;
+    --card-foreground: 0 0% 90%;
+  }
+
+  .dark {
+    --background: 240 4% 4%;
+    --foreground: 0 0% 95%;
+    --primary: 54 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 240 4% 8%;
+    --secondary-foreground: 0 0% 90%;
+    --border: 240 4% 12%;
+    --input: 240 4% 12%;
+    --ring: 54 100% 50%;
+    --radius: 0.5rem;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 240 4% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 54 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+    --popover: 240 4% 4%;
+    --popover-foreground: 0 0% 95%;
+    --card: 240 4% 8%;
+    --card-foreground: 0 0% 90%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Clash Display', sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}

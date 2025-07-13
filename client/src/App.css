@@ -1,0 +1,193 @@
+/* Premium Design System Styles */
+.glassmorphism-premium {
+  background: rgba(0, 0, 0, 0.7); /* Darker black with transparency */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 234, 0, 0.1); /* Yellow border with transparency */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.text-gradient-premium {
+  background: linear-gradient(135deg, #FFEA00 0%, #F0F0F0 100%); /* Yellow to light grey gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255, 234, 0, 0.2); /* Yellow glow on hover */
+}
+
+.premium-border {
+  border: 1px solid rgba(255, 234, 0, 0.2); /* Yellow border */
+}
+
+.premium-card {
+  background: rgba(0, 0, 0, 0.95); /* Deep black with transparency */
+  border: 1px solid rgba(255, 234, 0, 0.1); /* Yellow border with transparency */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  border-color: rgba(255, 234, 0, 0.3); /* More opaque yellow border on hover */
+  box-shadow: 0 8px 40px rgba(255, 234, 0, 0.15); /* Stronger yellow glow on hover */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Deep black track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFEA00; /* Vibrant yellow thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F0F0F0; /* Light grey on hover */
+}
+
+/* Before/After Image Comparison */
+.image-compare {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-compare-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #FFEA00; /* Vibrant yellow slider */
+  cursor: ew-resize;
+}
+
+.image-compare-handle {
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  background: #FFEA00; /* Vibrant yellow handle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Premium Button Styles */
+
+/* Premium Typography */
+
+/* Premium Animations */
+@keyframes float-premium {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg); /* Slightly less movement */
+  }
+}
+
+.animate-float-premium {
+  animation: float-premium 5s ease-in-out infinite; /* Slightly faster animation */
+}
+
+/* Premium Loading States */
+.loading-premium {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.loading-premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #FFEA00; /* Vibrant yellow loader */
+  border-radius: 50%;
+  border-right-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Custom animations for UI elements */
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typewriter-effect {
+  overflow: hidden; /* Ensures the text is not visible until typed */
+  white-space: nowrap; /* Keeps the text on a single line */
+  border-right: .15em solid #FFEA00; /* The blinking cursor */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FFEA00; }
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.hover-yellow-text:hover {
+  color: #FFEA00;
+}
+
+.hover-yellow-border:hover {
+  border-color: #FFEA00;
+}
+
+.section-transition {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
